@@ -8,6 +8,12 @@ import PromptSuggestionRow from '../components/PromptSuggestions/PromptSuggestio
 import ThemeButton from '../components/ThemeButton';
 import useConfiguration from './hooks/useConfiguration';
 
+import { TypewriterEffect } from "../components/ui/typewriter-effect"
+
+import {TypewriterEffectDemo} from '../components/Typewriter';
+
+
+
 
 export default function Home() {
   const { append, messages, input, handleInputChange, handleSubmit } = useChat();
@@ -34,9 +40,17 @@ export default function Home() {
   };
 
   return (
-    <>
+    <div >
+   
+    
+
+    
+    
+    
     <main className="flex h-screen flex-col items-center justify-center">
+      <TypewriterEffectDemo/>
       <section className='chatbot-section flex flex-col origin:w-[850px] w-full origin:h-[735px] h-full rounded-md p-2 md:p-6'>
+        
         <div className='chatbot-header pb-6'>
           <div className='flex justify-between'>
             <div className='flex items-center gap-2'>
@@ -83,6 +97,6 @@ export default function Home() {
       similarityMetric={similarityMetric}
       setConfiguration={setConfiguration}
     />
-    </>
+    </div>
   )
 }
