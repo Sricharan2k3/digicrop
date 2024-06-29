@@ -1,9 +1,10 @@
 import { AstraDB } from "@datastax/astra-db-ts";
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
-import 'dotenv/config'
-import sampleData from './sample_data.json';
+import 'dotenv/config';
+import pdf from 'pdf-parse';
 import OpenAI from 'openai';
 import { SimilarityMetric } from "../app/hooks/useConfiguration";
+import fs from 'fs';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -22,7 +23,31 @@ const similarityMetrics: SimilarityMetric[] = [
   'cosine',
   'euclidean',
   'dot_product',
-]
+];
+
+const pdfPaths = [
+  // 'scripts/dgca.pdf',
+  // 'scripts/mango1.pdf',
+  //  'scripts/mango2.pdf',
+  //   'scripts/mango3.pdf',
+  //    'scripts/Moringa_report.pdf',
+  //     'scripts/RICE-TEXT.pdf',
+  //     'scripts/rpto.pdf',
+  //     'scripts/sesame.pdf',
+  // Add more paths as needed
+];
+
+// const videoSuggestions = [
+//   { url: 'https://www.youtube.com/watch?v=example1', title: 'Example Video 1' },
+//   { url: 'https://www.youtube.com/watch?v=example2', title: 'Example Video 2' },
+//   // Add more video suggestions as needed
+// ];
+
+// const imageSuggestions = [
+//   { url: 'https://example.com/image1.jpg', title: 'Example Image 1' },
+//   { url: 'https://example.com/image2.jpg', title: 'Example Image 2' },
+//   // Add more image suggestions as needed
+// ];
 
 const createCollection = async (similarity_metric: SimilarityMetric = 'cosine') => {
   try {
@@ -38,27 +63,37 @@ const createCollection = async (similarity_metric: SimilarityMetric = 'cosine') 
   }
 };
 
-const loadSampleData = async (similarity_metric: SimilarityMetric = 'cosine') => {
-  const collection = await astraDb.collection(`chat_${similarity_metric}`);
-  for await (const { url, title, content } of sampleData) {
-    const chunks = await splitter.splitText(content);
-    let i = 0;
-    for await (const chunk of chunks) {
-      const { data } = await openai.embeddings.create({ input: chunk, model: 'text-embedding-ada-002' });
+const loadPDFData = async (pdfPath, similarity_metric: SimilarityMetric = 'cosine') => {
+  const dataBuffer = fs.readFileSync(pdfPath);
+  const data = await pdf(dataBuffer);
 
-      const res = await collection.insertOne({
-        document_id: `${url}-${i}`,
-        $vector: data[0]?.embedding,
-        url,
-        title,
-        content: chunk
-      });
-      i++;
-    }
+  const collection = await astraDb.collection(`chat_${similarity_metric}`);
+  const chunks = await splitter.splitText(data.text);
+  
+  let i = 0;
+  for await (const chunk of chunks) {
+    const { data: embeddingData } = await openai.embeddings.create({ input: chunk, model: 'text-embedding-ada-002' });
+
+    const res = await collection.insertOne({
+      document_id: `${pdfPath}-${i}`,
+      $vector: embeddingData[0]?.embedding,
+      url: pdfPath,
+      title: "PDF Document",
+      content: chunk,
+      // videoSuggestions,
+      // imageSuggestions
+    });
+    i++;
   }
-  console.log('data loaded');
+  console.log(`Data from ${pdfPath} loaded`);
+};
+
+const loadAllPDFs = async (similarity_metric: SimilarityMetric = 'cosine') => {
+  for (const pdfPath of pdfPaths) {
+    await loadPDFData(pdfPath, similarity_metric);
+  }
 };
 
 similarityMetrics.forEach(metric => {
-  createCollection(metric).then(() => loadSampleData(metric));
+  createCollection(metric).then(() => loadAllPDFs(metric));
 });
