@@ -4,12 +4,16 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <header className="px-6 lg:px-10 h-16 flex items-center">
-        <Link href="#" className="flex items-center justify-center" prefetch={false}>
+        <Link
+          href="#"
+          className="flex items-center justify-center"
+          prefetch={false}
+        >
           <MountainIcon className="h-8 w-8" />
           <span className="sr-only">AI Solutions</span>
         </Link>
         <nav className="ml-auto flex gap-6 sm:gap-8">
-          {['Features', 'Benefits', 'Pricing', 'Contact'].map((text) => (
+          {["Features", "Benefits", "Pricing", "Contact"].map((text) => (
             <Link
               key={text}
               href="#"
@@ -28,10 +32,12 @@ export default function Home() {
               <div className="flex flex-col justify-center space-y-6">
                 <div className="space-y-4">
                   <h1 className="text-4xl font-bold tracking-tighter sm:text-6xl xl:text-7xl/none">
-                    Unlock the Power of AI
+                    Digicrop.ai
                   </h1>
                   <p className="max-w-[650px] text-muted-foreground md:text-2xl">
-                    Our AI solutions help you streamline your workflows, boost productivity, and stay ahead of the competition.
+                    Pioneering the future of agriculture by harnessing the power
+                    of artificial intelligence (AI) to provide cutting-edge
+                    solutions for crop rate prediction and yield forecasting.
                   </p>
                 </div>
                 <div className="flex flex-col gap-4 min-[400px]:flex-row">
@@ -62,63 +68,98 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="features" className="w-full py-16 sm:py-28 md:py-36 lg:py-16 bg-muted">
+        <section
+          id="features"
+          className="w-full py-16 sm:py-28 md:py-36 lg:py-16 bg-muted"
+        >
           <div className="container mx-auto px-6 md:px-10 flex flex-col items-center space-y-10">
             <div className="space-y-6 text-center">
               <h2 className="text-4xl font-bold text-foreground sm:text-5xl md:text-6xl">
                 Powerful Features for Your Success
               </h2>
               <p className="max-w-[1050px] text-muted-foreground md:text-2xl">
-                Our AI solution offers a comprehensive suite of features to streamline your workflow and boost your productivity.
+                Our AI solution offers a comprehensive suite of features to
+                streamline your workflow and boost your productivity.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
               {features.map((feature) => (
-                <div key={feature.title} className="flex flex-col items-center text-center space-y-6">
+                <div
+                  key={feature.title}
+                  className="flex flex-col items-center text-center space-y-6"
+                >
                   {feature.icon}
-                  <h3 className="text-2xl font-bold text-foreground">{feature.title}</h3>
-                  <p className="text-muted-foreground text-lg">{feature.description}</p>
+                  <h3 className="text-2xl font-bold text-foreground">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground text-lg">
+                    {feature.description}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section id="benefits" className="w-full py-16 sm:py-28 md:py-36 lg:py-16">
+        <section
+          id="benefits"
+          className="w-full py-16 sm:py-28 md:py-36 lg:py-16"
+        >
           <div className="container mx-auto px-6 md:px-10 flex flex-col items-center space-y-10">
             <div className="space-y-6 text-center">
-              <h2 className="text-4xl font-bold text-foreground sm:text-5xl md:text-6xl">Unlock the Benefits of AI</h2>
+              <h2 className="text-4xl font-bold text-foreground sm:text-5xl md:text-6xl">
+                Unlock the Benefits of AI
+              </h2>
               <p className="max-w-[750px] text-muted-foreground text-xl md:text-2xl">
-                Our AI solution delivers tangible benefits that can transform your business.
+                Our AI solution delivers tangible benefits that can transform
+                your business.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
               {benefits.map((benefit) => (
-                <div key={benefit.title} className="flex flex-col items-center text-center space-y-6">
+                <div
+                  key={benefit.title}
+                  className="flex flex-col items-center text-center space-y-6"
+                >
                   {benefit.icon}
-                  <h3 className="text-2xl font-bold text-foreground">{benefit.title}</h3>
-                  <p className="text-muted-foreground text-lg">{benefit.description}</p>
+                  <h3 className="text-2xl font-bold text-foreground">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-muted-foreground text-lg">
+                    {benefit.description}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section id="pricing" className="w-full py-16 sm:py-28 md:py-36 lg:py-16 bg-muted">
+        <section
+          id="pricing"
+          className="w-full py-16 sm:py-28 md:py-36 lg:py-16 bg-muted"
+        >
           <div className="container mx-auto px-6 md:px-10 flex flex-col items-center space-y-10">
             <div className="space-y-6 text-center">
               <h2 className="text-4xl font-bold text-foreground sm:text-5xl md:text-6xl">
                 Affordable Pricing for Every Business
               </h2>
               <p className="max-w-[1050px] text-muted-foreground text-xl md:text-2xl">
-                Choose the plan that best fits your needs and budget, and start unlocking the power of AI today.
+                Choose the plan that best fits your needs and budget, and start
+                unlocking the power of AI today.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
               {pricingPlans.map((plan) => (
-                <div key={plan.title} className="bg-background rounded-lg shadow-lg p-8 space-y-6">
-                  <h3 className="text-2xl font-bold text-foreground">{plan.title}</h3>
-                  <p className="text-5xl font-bold text-primary">${plan.price}</p>
+                <div
+                  key={plan.title}
+                  className="bg-background rounded-lg shadow-lg p-8 space-y-6"
+                >
+                  <h3 className="text-2xl font-bold text-foreground">
+                    {plan.title}
+                  </h3>
+                  <p className="text-5xl font-bold text-primary">
+                    ${plan.price}
+                  </p>
                   <p className="text-muted-foreground text-lg">per month</p>
                   <ul className="space-y-4 text-muted-foreground text-lg">
                     {plan.features.map((feature, index) => (
@@ -141,12 +182,18 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="w-full  sm:py-28 md:py-36 lg:py-16 bg-muted">
+        <section
+          id="contact"
+          className="w-full  sm:py-28 md:py-36 lg:py-16 bg-muted"
+        >
           <div className="container mx-auto px-6 md:px-10 flex flex-col items-center space-y-10">
             <div className="space-y-6 text-center">
-              <h2 className="text-4xl font-bold text-foreground sm:text-5xl md:text-6xl">Get in Touch</h2>
+              <h2 className="text-4xl font-bold text-foreground sm:text-5xl md:text-6xl">
+                Get in Touch
+              </h2>
               <p className="max-w-[750px] text-muted-foreground text-xl md:text-2xl">
-                Have questions or ready to get started? Contact us today to learn more about our AI solutions.
+                Have questions or ready to get started? Contact us today to
+                learn more about our AI solutions.
               </p>
             </div>
             <div className="mx-auto w-full max-w-md space-y-4">
@@ -163,18 +210,30 @@ export default function Home() {
                   Contact Us
                 </button>
               </form>
-              <p className="text-xs text-muted-foreground text-center">We&apos;ll get back to you as soon as possible.</p>
+              <p className="text-xs text-muted-foreground text-center">
+                We&apos;ll get back to you as soon as possible.
+              </p>
             </div>
           </div>
         </section>
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-6 md:px-10 border-t">
-        <p className="text-xs text-muted-foreground">&copy; 2024 AI Solutions. All rights reserved.</p>
+        <p className="text-xs text-muted-foreground">
+          &copy; 2024 AI Solutions. All rights reserved.
+        </p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link href="#" className="text-xs hover:underline underline-offset-4" prefetch={false}>
+          <Link
+            href="#"
+            className="text-xs hover:underline underline-offset-4"
+            prefetch={false}
+          >
             Terms of Service
           </Link>
-          <Link href="#" className="text-xs hover:underline underline-offset-4" prefetch={false}>
+          <Link
+            href="#"
+            className="text-xs hover:underline underline-offset-4"
+            prefetch={false}
+          >
             Privacy Policy
           </Link>
         </nav>
@@ -288,26 +347,94 @@ function MountainIcon(props) {
 
 // Sample data for features, benefits, and pricing
 const features = [
-  { icon: <CpuIcon className="w-12 h-12" />, title: "Advanced AI", description: "State-of-the-art AI models trained on vast datasets to provide accurate and reliable results." },
-  { icon: <CloudIcon className="w-12 h-12" />, title: "Cloud Integration", description: "Seamless integration with leading cloud platforms to ensure scalability and performance." },
-  { icon: <RocketIcon className="w-12 h-12" />, title: "Fast and Efficient", description: "Optimized algorithms for rapid processing and minimal latency." },
-  { icon: <CpuIcon className="w-12 h-12" />, title: "User-Friendly Interface", description: "Intuitive and easy-to-use interface designed for all levels of users." },
-  { icon: <CloudIcon className="w-12 h-12" />, title: "Robust Security", description: "Top-notch security measures to protect your data and ensure compliance." },
-  { icon: <RocketIcon className="w-12 h-12" />, title: "24/7 Support", description: "Our dedicated support team is available around the clock to assist you." },
+  {
+    icon: <CpuIcon className="w-12 h-12" />,
+    title: "Empowering Agriculture",
+    description:
+      "State-of-the-art AI models trained on vast datasets to provide accurate and reliable results.",
+  },
+  {
+    icon: <CloudIcon className="w-12 h-12" />,
+    title: "Crop Rate Prediction",
+    description:
+      "Generate precise forecasts of crop rates, enabling stakeholders to anticipate market fluctuations and optimize their trading strategie.",
+  },
+  {
+    icon: <RocketIcon className="w-12 h-12" />,
+    title: "Fast and Efficient",
+    description:
+      "Optimized algorithms for rapid processing and minimal latency.",
+  },
+  {
+    icon: <CpuIcon className="w-12 h-12" />,
+    title: "User-Friendly Interface",
+    description:
+      "Intuitive and easy-to-use interface designed for all levels of users.",
+  },
+  {
+    icon: <CloudIcon className="w-12 h-12" />,
+    title: "Yield Prediction",
+    description:
+      "Yield prediction solutions empower in making data-driven decisions that drive agricultural productivity and profitability.",
+  },
+  {
+    icon: <RocketIcon className="w-12 h-12" />,
+    title: "Dedicated Support",
+    description:
+      "Our dedicated support team is available around the clock to assist you.",
+  },
 ];
 
 const benefits = [
-  { icon: <CpuIcon className="w-12 h-12" />, title: "Increased Productivity", description: "Automate routine tasks and focus on higher-value activities to boost productivity." },
-  { icon: <CloudIcon className="w-12 h-12" />, title: "Cost Savings", description: "Reduce operational costs with efficient AI-powered solutions." },
-  { icon: <RocketIcon className="w-12 h-12" />, title: "Competitive Edge", description: "Gain a competitive advantage with innovative AI technologies." },
-  { icon: <CpuIcon className="w-12 h-12" />, title: "Scalability", description: "Easily scale your operations to meet growing business demands." },
-  { icon: <CloudIcon className="w-12 h-12" />, title: "Improved Accuracy", description: "Leverage precise data analysis to make informed decisions." },
-  { icon: <RocketIcon className="w-12 h-12" />, title: "Flexibility", description: "Adapt to changing needs with flexible and customizable AI solutions." },
+  {
+    icon: <CpuIcon className="w-12 h-12" />,
+    title: "Increased Productivity",
+    description:
+      "Automate routine tasks and focus on higher-value activities to boost productivity.",
+  },
+  {
+    icon: <CloudIcon className="w-12 h-12" />,
+    title: "Cost Savings",
+    description:
+      "Reduce operational costs with efficient AI-powered solutions.",
+  },
+  {
+    icon: <RocketIcon className="w-12 h-12" />,
+    title: "Resource Management",
+    description: "Enhanced resource management with crop yield predictions",
+  },
+  {
+    icon: <CpuIcon className="w-12 h-12" />,
+    title: "Profitability",
+    description: "Increased profitability through informed decision-making",
+  },
+  {
+    icon: <CloudIcon className="w-12 h-12" />,
+    title: "Yield Quality",
+    description: "Reduced crop loss with timely pest detection",
+  },
+  {
+    icon: <RocketIcon className="w-12 h-12" />,
+    title: "Flexibility",
+    description:
+      "Adapt to changing needs with flexible and customizable AI solutions.",
+  },
 ];
 
 const pricingPlans = [
-  { title: "Basic", price: "19", features: ["Feature 1", "Feature 2", "Feature 3"] },
-  { title: "Standard", price: "49", features: ["Feature 1", "Feature 2", "Feature 3"] },
-  { title: "Premium", price: "99", features: ["Feature 1", "Feature 2", "Feature 3"] },
-  
+  {
+    title: "Basic",
+    price: "19",
+    features: ["Feature 1", "Feature 2", "Feature 3"],
+  },
+  {
+    title: "Standard",
+    price: "49",
+    features: ["Feature 1", "Feature 2", "Feature 3"],
+  },
+  {
+    title: "Premium",
+    price: "99",
+    features: ["Feature 1", "Feature 2", "Feature 3"],
+  },
 ];
