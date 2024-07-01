@@ -78,8 +78,9 @@ export default function Home() {
                 Powerful Features for Your Success
               </h2>
               <p className="max-w-[1050px] text-muted-foreground md:text-2xl">
-                Our AI solution offers a comprehensive suite of features to
-                streamline your workflow and boost your productivity.
+                Empower farmers, agribusinesses, and policymakers with
+                actionable insights that optimize resource allocation, mitigate
+                risks, and maximize productivity.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
@@ -264,20 +265,59 @@ function CheckIcon(props) {
 function CpuIcon(props) {
   return (
     <svg
-      {...props}
+      id="Capa_1"
       xmlns="http://www.w3.org/2000/svg"
-      width="30"
-      height="30"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      width="80.13px"
+      height="80.13px"
+      viewBox="0 0 80.13 80.13"
+      style={{
+        enableBackground: "new 0 0 80.13 80.13",
+      }}
+      xmlSpace="preserve"
+      {...props}
     >
-      <rect x="4" y="4" width="16" height="16" rx="2" ry="2" />
-      <path d="M9 9h6v6H9z" />
-      <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3" />
+      <g>
+        <path d="M48.355,17.922c3.705,2.323,6.303,6.254,6.776,10.817c1.511,0.706,3.188,1.112,4.966,1.112 c6.491,0,11.752-5.261,11.752-11.751c0-6.491-5.261-11.752-11.752-11.752C53.668,6.35,48.453,11.517,48.355,17.922z M40.656,41.984 c6.491,0,11.752-5.262,11.752-11.752s-5.262-11.751-11.752-11.751c-6.49,0-11.754,5.262-11.754,11.752S34.166,41.984,40.656,41.984 z M45.641,42.785h-9.972c-8.297,0-15.047,6.751-15.047,15.048v12.195l0.031,0.191l0.84,0.263 c7.918,2.474,14.797,3.299,20.459,3.299c11.059,0,17.469-3.153,17.864-3.354l0.785-0.397h0.084V57.833 C60.688,49.536,53.938,42.785,45.641,42.785z M65.084,30.653h-9.895c-0.107,3.959-1.797,7.524-4.47,10.088 c7.375,2.193,12.771,9.032,12.771,17.11v3.758c9.77-0.358,15.4-3.127,15.771-3.313l0.785-0.398h0.084V45.699 C80.13,37.403,73.38,30.653,65.084,30.653z M20.035,29.853c2.299,0,4.438-0.671,6.25-1.814c0.576-3.757,2.59-7.04,5.467-9.276 c0.012-0.22,0.033-0.438,0.033-0.66c0-6.491-5.262-11.752-11.75-11.752c-6.492,0-11.752,5.261-11.752,11.752 C8.283,24.591,13.543,29.853,20.035,29.853z M30.589,40.741c-2.66-2.551-4.344-6.097-4.467-10.032 c-0.367-0.027-0.73-0.056-1.104-0.056h-9.971C6.75,30.653,0,37.403,0,45.699v12.197l0.031,0.188l0.84,0.265 c6.352,1.983,12.021,2.897,16.945,3.185v-3.683C17.818,49.773,23.212,42.936,30.589,40.741z" />
+      </g>
+    </svg>
+  );
+}
+
+function CpuIcon1(props) {
+  return (
+    <svg
+      id="Icons"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 32 32"
+      xmlSpace="preserve"
+      {...props}
+    >
+      <style type="text/css">
+        {
+          "\n\t.st0{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n"
+        }
+      </style>
+      <path
+        className="st0"
+        d="M3,25l2.6-4.2c1.5-2.3,4-3.8,6.8-3.8H19v0c0,2.2-1.8,4-4,4h-2"
+      />
+      <path
+        className="st0"
+        d="M16,21h7l1.2-1.6c1.1-1.5,2.9-2.4,4.8-2.4h0l-2.7,4.8c-1.4,2.6-4.2,4.2-7.1,4.2h0c-4.7,0-9.3,1.4-13.2,4l0,0"
+      />
+      <path
+        className="st0"
+        d="M18,10L18,10L18,10c0-3.9,3.1-7,7-7h0v0C25,6.9,21.9,10,18,10z"
+      />
+      <path
+        className="st0"
+        d="M18,13L18,13c-3.9,0-7-3.1-7-7v0h0C14.9,6,18,9.1,18,13L18,13z"
+      />
+      <line className="st0" x1={18} y1={2} x2={18} y2={17} />
     </svg>
   );
 }
@@ -303,6 +343,22 @@ function CloudIcon(props) {
 }
 
 function RocketIcon(props) {
+  return (
+    <svg
+      width="800px"
+      height="800px"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <title>{"support"}</title>
+      <rect width={24} height={24} fill="none" />
+      <path d="M12,2a8,8,0,0,0-8,8v1.9A2.92,2.92,0,0,0,3,14a2.88,2.88,0,0,0,1.94,2.61C6.24,19.72,8.85,22,12,22h3V20H12c-2.26,0-4.31-1.7-5.34-4.39l-.21-.55L5.86,15A1,1,0,0,1,5,14a1,1,0,0,1,.5-.86l.5-.29V11a1,1,0,0,1,1-1H17a1,1,0,0,1,1,1v5H13.91a1.5,1.5,0,1,0-1.52,2H20a2,2,0,0,0,2-2V14a2,2,0,0,0-2-2V10A8,8,0,0,0,12,2Z" />
+    </svg>
+  );
+}
+
+function RocketIcon1(props) {
   return (
     <svg
       {...props}
@@ -348,7 +404,7 @@ function MountainIcon(props) {
 // Sample data for features, benefits, and pricing
 const features = [
   {
-    icon: <CpuIcon className="w-12 h-12" />,
+    icon: <CpuIcon1 className="w-12 h-12" />,
     title: "Empowering Agriculture",
     description:
       "State-of-the-art AI models trained on vast datasets to provide accurate and reliable results.",
@@ -360,7 +416,7 @@ const features = [
       "Generate precise forecasts of crop rates, enabling stakeholders to anticipate market fluctuations and optimize their trading strategie.",
   },
   {
-    icon: <RocketIcon className="w-12 h-12" />,
+    icon: <RocketIcon1 className="w-12 h-12" />,
     title: "Fast and Efficient",
     description:
       "Optimized algorithms for rapid processing and minimal latency.",
