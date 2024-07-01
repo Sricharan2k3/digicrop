@@ -24,7 +24,7 @@ export const TypewriterEffectDemo = () => {
 
   return (
     <div className="flex flex-col items-center justify-center h-[15rem]">
-      <p className="text-neutral-200 text-lg mb-10 ">
+      <p className="chatbot-text-primary text-lg mb-10 ">
       Unlock Smart Farming with DigiCrop
       </p>
       <TypewriterEffect words={words} />
