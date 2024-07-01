@@ -163,7 +163,7 @@ export default function Home() {
                   Contact Us
                 </button>
               </form>
-              <p className="text-xs text-muted-foreground text-center">We'll get back to you as soon as possible.</p>
+              <p className="text-xs text-muted-foreground text-center">We&apos;ll get back to you as soon as possible.</p>
             </div>
           </div>
         </section>
