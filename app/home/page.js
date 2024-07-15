@@ -61,7 +61,7 @@ export default function Home() {
                 src="/placeholder.svg"
                 width="650"
                 height="650"
-                alt="Hero"
+                alt="https://d33hqsk72xx8w2.cloudfront.net/wp-content/uploads/digicrop-web-banner.png"
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
               />
             </div>
