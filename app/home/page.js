@@ -58,10 +58,10 @@ export default function Home() {
                 </div>
               </div>
               <img
-                src="/placeholder.svg"
+                src="https://d33hqsk72xx8w2.cloudfront.net/wp-content/uploads/digicrop-web-banner.png"
                 width="650"
                 height="650"
-                alt="https://d33hqsk72xx8w2.cloudfront.net/wp-content/uploads/digicrop-web-banner.png"
+                alt="WebBanner"
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
               />
             </div>
