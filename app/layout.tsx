@@ -2,8 +2,8 @@ import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 
 export const metadata = {
-  title: "RAGBot Starter",
-  description: "RAGBot Starter - Powered by DataStax and Vercel",
+  title: "Digicrop ",
+  description: "- AI Crop Assistant",
 };
 
 export default function RootLayout({ children }) {

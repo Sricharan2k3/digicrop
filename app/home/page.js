@@ -9,7 +9,10 @@ export default function Home() {
           className="flex items-center justify-center"
           prefetch={false}
         >
-          <MountainIcon className="h-8 w-8" />
+          <img
+            className="h-12  w-12"
+            src="https://d33hqsk72xx8w2.cloudfront.net/wp-content/uploads/bot.png"
+          ></img>{" "}
           <span className="sr-only">AI Solutions</span>
         </Link>
         <nav className="ml-auto flex gap-6 sm:gap-8">
@@ -26,44 +29,39 @@ export default function Home() {
         </nav>
       </header>
       <main className="flex-1">
-        <section className="w-full py-16 md:py-28 lg:py-16">
-          <div className="container mx-auto px-6 md:px-10">
-            <div className="grid gap-8 lg:grid-cols-[1fr_450px] lg:gap-16 xl:grid-cols-[1fr_650px]">
-              <div className="flex flex-col justify-center space-y-6">
-                <div className="space-y-4">
-                  <h1 className="text-4xl font-bold tracking-tighter sm:text-6xl xl:text-7xl/none">
-                    Digicrop.ai
-                  </h1>
-                  <p className="max-w-[650px] text-muted-foreground md:text-2xl">
-                    Pioneering the future of agriculture by harnessing the power
-                    of artificial intelligence (AI) to provide cutting-edge
-                    solutions for crop rate prediction and yield forecasting.
-                  </p>
-                </div>
-                <div className="flex flex-col gap-4 min-[400px]:flex-row">
-                  <Link
-                    href="#"
-                    className="inline-flex h-12 items-center justify-center rounded-md bg-primary px-10 text-lg font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                    prefetch={false}
-                  >
-                    Get Started
-                  </Link>
-                  <Link
-                    href="#"
-                    className="inline-flex h-12 items-center justify-center rounded-md border border-input bg-background px-10 text-lg font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                    prefetch={false}
-                  >
-                    Learn More
-                  </Link>
-                </div>
+        <section className="relative w-full h-screen">
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage:
+                "url(https://d33hqsk72xx8w2.cloudfront.net/wp-content/uploads/digicrop-web-banner.png)",
+            }}
+          ></div>
+          <div className="relative z-20 flex items-end justify-center h-full pb-10 text-white">
+            <div className="text-center p-6 md:p-10">
+              <div className="  space-y-4">
+                <p className="max-w-[650px] mt-24 mx-auto text-muted-foreground md:text-2xl text-white">
+                  Pioneering the future of agriculture by harnessing the power
+                  of artificial intelligence (AI) to provide cutting-edge
+                  solutions for crop rate prediction and yield forecasting.
+                </p>
               </div>
-              <img
-                src="https://d33hqsk72xx8w2.cloudfront.net/wp-content/uploads/digicrop-web-banner.png"
-                width="650"
-                height="650"
-                alt="WebBanner"
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
-              />
+              <div className="flex flex-col gap-4 min-[400px]:flex-row mt-6 justify-center">
+                <Link
+                  href="#"
+                  className="inline-flex h-12 items-center justify-center rounded-md bg-primary px-10 text-lg font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                  prefetch={false}
+                >
+                  Get Started
+                </Link>
+                <Link
+                  href="#"
+                  className="inline-flex bg-primary h-12 items-center justify-center rounded-md border border-input px-10 text-lg font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                  prefetch={false}
+                >
+                  Learn More
+                </Link>
+              </div>
             </div>
           </div>
         </section>
